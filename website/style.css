@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    color: #fff;
+    background-color: #000;
+}
+
+a:link,
+a:visited {
+    color: rgb(4, 82, 49);
+    text-decoration: underline;
+}
+
+
+a:hover {
+    color: rgb(192, 57, 43);
+}
+
+body {
+    background-image: url(./img/weather.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(4, 8, 7);
+    font: 500 1rem "Roboto", sans-serif;
+}
+
+#app {
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-content: center;
+    margin: 3rem 1rem 1rem;
+}
+
+.holder {
+    text-align: center;
+    width: auto;
+    justify-items: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+
+.headline {
+    font: 800 2.5rem "Roboto Slab", serif;
+    text-decoration: underline overline rgb(15, 15, 15);
+}
+
+
+.zip,
+.feel,
+.entry {
+    background:transparent;
+}
+
+.title {
+    font: 800 1.5rem "Roboto Slab", serif;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgb(249, 250, 249);
+}
+
+p{
+    font-size: large;
+    font-weight: bolder;
+    color: rgb(4, 8, 7);
+}
+
+#entryHolder {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(48px, 1fr);
+    padding: 0.5rem 0;
+    margin: 1rem 1rem 0;
+    justify-content: center;
+    align-content: center;
+}
+
+
+
+#date {
+    grid-area: 2 / 1 / span 1 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#temp {
+    grid-area: 3 / 1 / span 1 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+
+
+
+
+
+
+#content {
+    grid-area: 8 / 1 / span 1 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label {
+    display: block;
+    font: 800 1.5rem "Roboto Slab", serif;
+}
+
+input {
+    width: 250px;
+    height: 32px;
+    background: rgb(223, 55, 4);
+    font: 500 1rem "Roboto", sans-serif;
+    color: #fff;
+    border: none;
+}
+
+button {
+    width: 100px;
+    height: 20px;
+    background: rgb(230, 77, 16);
+    color: #fff;
+    border: none;
+    box-shadow: 2px 4px 5px rgb(7, 119, 76);
+    margin: 1rem 0;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+h1 {
+    font-size: 36px;
+}
+
+textarea {
+    background: rgb(211, 86, 28);
+    color: #fff;
+    font: 500 1rem "Roboto", sans-serif;
+    border: none;
+}
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */
+    color: #fff;
+
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #fff;
+
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #fff;
+
+}
