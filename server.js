@@ -15,13 +15,18 @@ const cors = require('cors');
 app.use(cors());
 // Initialize the main project folder
 app.use(express.static('website'));
-// Setup Server
-const port = 8080;
-const server = app.listen(port, listening);
-function listening(){
-     console.log("server running"); 
-     console.log(`running on localhost: ${port}`);
-}
+// Setup heroku host
+# port (as described above) and host are both wrong
+const host = 'localhost';
+const port = 8000;
+
+# use alternate localhost and the port Heroku assigns to $PORT
+const host = '0.0.0.0';
+const port = process.env.PORT || 8000;
+
+app.listen(port, host, function() {
+  console.log("Server started.......");
+});
 // GET route
 app.get('/all', getprojectData);
 function getprojectData(req,res)
